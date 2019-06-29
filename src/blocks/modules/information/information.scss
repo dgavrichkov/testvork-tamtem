@@ -1,0 +1,62 @@
+.information {
+    padding-top: 90px;
+    background: url("/img/paper.png") no-repeat;
+    background-position: bottom left;
+    background-size: contain;
+    &__title {
+        font-size: 42px;
+        line-height: 47px;
+        font-family: $font-thin;
+        font-weight: 300;
+    }
+    &__list {
+        @include row-flex();
+        margin-top: 50px;
+    }
+    &__item {
+        @include col();
+        @include size(6);
+        display: flex;
+    }
+    &__pic {
+        svg {
+            path {
+                fill: $violet;
+            }
+        }
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 23px;
+        font-family: $font-thin;
+        flex: 1;
+        margin-left: 30px;
+        span {
+            font-family: $font-bold;
+            font-size: 18px;
+        }
+    }
+    &__order {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 196px;
+        height: 50px;
+        text-decoration: none;
+        color: $text-light;
+        background: $violet;
+        border-radius: 50px;
+        box-shadow: 0 10px 10px rgba(65, 42, 189, 0.2);
+    }
+    &__tabs {
+        @include row-flex();
+        margin-top: 50px;
+    }
+}
+
+.tabs {
+    &__item{
+        @include col();
+        @include size(6);
+    }
+}
