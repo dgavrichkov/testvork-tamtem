@@ -9,7 +9,7 @@ gulp.task("smart-grid", (cb) => {
         filename: "_smart-grid",
         columns: 12, // number of grid columns
         offset: "30px", // gutter width
-        mobileFirst: true,
+        mobileFirst: false,
         mixinNames: {
             container: "container"
         },

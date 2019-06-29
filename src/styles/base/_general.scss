@@ -4,13 +4,25 @@ h3,
 h4,
 h5,
 h6,
-ul {
+ul,
+p {
     margin: 0;
     padding: 0;
+}
+ul {
+    list-style: none;
 }
 * {
     box-sizing: border-box;
     font-family: "MuseoSans Regular", Arial, Helvetica, sans-serif;
+    color: $text-main;
+}
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 .container {
     @include container();

@@ -1,0 +1,9 @@
+.logo {
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    &-pic {
+        margin-top: -3px;
+        margin-right: 7px;
+    }
+}

@@ -1,0 +1,26 @@
+.features {
+    // @include xs(margin-bottom, 0);
+    background: url("/img/dekor-bottom.svg") repeat-x, $violet;
+    background-position: bottom left;
+    padding: 50px 0;
+    
+    &__list {
+        @include row-flex();
+    }
+    &__item {
+        @include col();
+        @include size(4);
+        @include size-xs(12);
+    }
+    &__pic {
+        text-align: center;
+        margin-bottom: 23px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        font-family: $font-thin;
+        color: $text-light;
+    }
+}
