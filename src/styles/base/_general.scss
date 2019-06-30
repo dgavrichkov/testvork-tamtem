@@ -32,6 +32,7 @@ body {
     @include sm(max-width, 320px);
     @include md(max-width, 668px);
     @include lg(max-width, 768px);
-    @include xl(max-width, 992px);
+    @include mlg(max-width, 992px);
+    @include xl(max-width, 1200px);
     @include xxl(max-width, 1600px);
 }

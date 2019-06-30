@@ -1,10 +1,11 @@
 header.header
     include ../header-topbar/header-topbar.pug
-    section.header-content.container
-        h2.header-content__title Займы на развитие бизнеса #[br] до 1,5 миллионов рублей
-        .header-content__order.header-order
-            a(href="").header-order__btn Оформить заявку
-            span.header-order__detail (Если у вас есть электронная подпись)
+    section.header-content
+        .header-content__container.container
+            h2.header-content__title Займы на развитие бизнеса #[br] до 1,5 миллионов рублей
+            .header-content__order.header-order
+                a(href="").header-order__btn Оформить заявку
+                span.header-order__detail (Если у вас есть электронная подпись)
     section.header-settings
         .header-settings__item
             label.header-settings__label Я хочу занять: #[span 120 000 ₽ ]
@@ -17,5 +18,5 @@ header.header
             b 45 000 ₽
         .header-settings__detail 
             p * Условия являются индикативными и могут быть изменены по результатам анализа заемщика
-    section.header-copy
-        p ВКРЕДИТ является ООО «Выдающиеся кредиты»
+    footer.header-footer
+        p.header-footer__copy ВКРЕДИТ является ООО «Выдающиеся кредиты»

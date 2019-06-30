@@ -29,6 +29,9 @@ gulp.task("smart-grid", (cb) => {
             lg: {
                 width: "992px"
             },
+            mlg : {
+                width: "1200px"
+            },
             xl: {
                 width: "1600px"
             },
