@@ -20,11 +20,13 @@
 }
 .mainmenu {
     &__list {
+        @include lg(display, none);
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         min-height: 80px;
     }
+
     &__item {
         padding-left: 3px;
         padding-right: 3px;
@@ -74,6 +76,7 @@
         height: 38px;
     }
     &__link {
+        @include md(display, none);
         display: flex;
         align-items: center;
         height: 20px;
@@ -99,4 +102,10 @@
         margin-left: 6px;
         margin-bottom: -2px;
     }
+}
+
+.mobile-burger {
+    @include lg(display, flex);
+    display: none;
+    margin-left: 20px;
 }

@@ -1,4 +1,7 @@
 .header {
+    @include mlg(background-size, auto 90%);
+    @include mlg(background-position-x, 110%);
+    @include mlg(background-position-y, 100%);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -11,12 +14,24 @@
 
 .header-content {
     flex-grow: 1;
+    &__box {
+        @include row-flex();
+        @include xl(margin-top, 100px);
+        @include mlg(margin-top, 80px);
+        @include lg(margin-top, 20px);
+        margin-top: 180px;
+    }
+    &__column {
+        @include col();
+        @include size(8);
+    }
     &__title {
+        @include mlg(font-size, 40px);
+        @include mlg(line-height, 48px);
         font-size: 60px;
         line-height: 68px;
         font-family: $font-thin;
         font-weight: 300;
-        margin-top: 180px;
     }
 }
 
@@ -43,6 +58,12 @@
 }
 
 .header-settings {
+    @include mlg(right, 50px);
+    @include lg(top, 50%);
+    // @include lg(bottom, 20px);
+    @include lg(left, 20px);
+    @include lg(width, 360px);
+    @include lg(height, 326px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
