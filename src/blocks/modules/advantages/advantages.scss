@@ -52,17 +52,44 @@
         @include col();
         @include size(4);
     }
+    &__bottom {
+        @include row-flex();
+        align-items: center;
+    }
     &__order {
+        @include col();
+        @include size(2);
+        @include size-xl(3);
+        @include size-lg(4);
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 196px;
         height: 50px;
         text-decoration: none;
         color: $text-light;
         background: $violet;
         border-radius: 50px;
         box-shadow: 0 10px 10px rgba(65, 42, 189, 0.2);
+    }
+
+    &__indicators {
+        @include col();
+        @include size(10);
+        @include size-xl(9);
+        @include size-lg(8);
+        display: flex;
+        background: $gray-light;
+        height: 2px;
+    }
+    &__indicator {
+        background: $gray-light;
+        width: 50%;
+        height: 2px;
+        border-radius: 30px;
+        &--active {
+            background: $violet;
+            height: 4px;
+        }
     }
 }
 .advantage {

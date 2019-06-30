@@ -8,9 +8,16 @@
     }
     &__top {
         @include row-flex();
+        @include sm(flex-direction, column);
+        @include sm(justify-content, flex-start);
+        @include sm(align-items, center);
+        align-items: center;
         justify-content: center;
     }
     &__title {
+        @include sm(margin, 0 0 20px 0);
+        @include sm(font-size, 24px);
+        @include md(font-size, 30px);
         color: $text-light;
         font-size: 42px;
         font-family: $font-thin;
@@ -30,14 +37,15 @@
         height: 50px;
         text-decoration: none;
         border-radius: 50px;
-        border: 1px solid $text-light;
+        border: 2px solid $text-light;
         color: $text-light;
         svg {
             margin-left: 10px;
         }
     }
     &__text {
-        width: 50%;
+        @include lg(width, 100%);
+        width: 60%;
         text-align: center;
         margin-top: 45px;
         margin-bottom: 45px;
