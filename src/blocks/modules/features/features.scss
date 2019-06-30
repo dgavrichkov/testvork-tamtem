@@ -3,14 +3,18 @@
     background: url("/img/dekor-bottom.svg") repeat-x, $violet;
     background-position: bottom left;
     padding: 50px 0;
-    
+    @include ssm(padding-bottom, 40px);    
     &__list {
         @include row-flex();
+        @include ssm(padding-top, 364px);
     }
     &__item {
         @include col();
         @include size(4);
-        @include size-xs(12);
+        @include size-ssm(12);
+        &:not(:last-child) {
+            @include ssm(margin-bottom, 35px);
+        }
     }
     &__pic {
         text-align: center;
