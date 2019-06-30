@@ -1,17 +1,21 @@
 .footer {
+    @include ssm(padding, 25px 0);    
     background-color: $dark;
-    
     &__container {
+        @include ssm(align-items, flex-start);
         display: flex;
         align-items: center;
         justify-content: space-between;
         min-height: 115px;
     }
     &__menu {
+        @include ssm(flex-direction, column);
+        @include ssm(align-items, flex-start);
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         &-item {
+            @include ssm(margin-bottom, 10px);
             padding-left: 3px;
             padding-right: 3px;
             &:not(:last-child) {

@@ -6,8 +6,12 @@
     background-size: 42%;
     @include lg(background-size, 90%);
     @include lg(background-position, -320% 120%);
+    @include ssm(padding-top, 36px);
     &__title {
         @include lg(font-size, 30px);
+        @include ssm(text-align, center);
+        @include ssm(font-size, 24px);
+        @include ssm(line-height, 27px);
         font-size: 42px;
         line-height: 47px;
         font-family: $font-thin;
