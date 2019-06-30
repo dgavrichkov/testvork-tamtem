@@ -1,1 +1,14 @@
 section.contacts
+    .contacts__content.contacts__item
+        h2.contacts__title Наши отделения
+        .contacts__select 
+            | Москва
+            .contacts__select-btn#select-btn
+                <svg class="contacts__select-icon" width="11" height="7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 7L10.263.25H.737L5.5 7z" fill="#412ABD"/></svg>
+        address.contacts__address 
+            | г. Москва, пер. Калужский М., 4/1, офис 19 (2 этаж)
+        a(href="mailto: info@v.credit").contacts__link.contacts__link--mailto info@v.credit
+        a(href="tel :8 (800) 700-92-02").contacts__link.contacts__link--tel 8 (800) 700-92-02
+        a(href="#").contacts__order Связаться с нами
+    .contacts__map.contacts__item
+        img(src="img/map.jpg").contacts__map-img

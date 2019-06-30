@@ -1,0 +1,91 @@
+.contacts {
+    @include row-flex();
+    &__item {
+        @include col();
+        @include size(6);
+    }
+    &__content {
+        padding: 77px 0 0 0;
+        padding-left: 8%;
+        font-family: $font-thin;
+    }
+    &__title {
+        @include lg(font-size, 30px);
+        @include ssm(text-align, center);
+        @include ssm(font-size, 24px);
+        @include ssm(line-height, 27px);
+        font-size: 42px;
+        line-height: 47px;
+        
+        font-weight: 300;
+    }
+    &__select {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: 56px;
+        padding-left: 20px;
+        width: 415px;
+        height: 45px;
+        border: 1px solid $gray-dark;
+        border-radius: 5px;
+        &-icon {
+            position: absolute;
+            top: calc(50% - 4px);
+            right: 15px;
+            cursor: pointer;
+            &:hover {
+                path {
+                    fill: $green;
+                }
+            }
+        }
+    }
+    &__address {
+        font-style: normal;
+        margin-top: 34px;
+        margin-bottom: 34px;
+    }
+    &__link {
+        display: flex;
+        position: relative;
+        padding-left: 30px;
+        text-decoration: none;
+        color: $dark;
+        font-size: 16px;
+        font-family: $font-bold;
+        margin-top: 15px;
+        &:hover {
+            color: $violet;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &--tel::before {
+            width: 18px;
+            height: 18px;
+            background: url("/img/call.svg") no-repeat;
+        }
+        &--mailto::before {
+            width: 18px;
+            height: 13px;
+            background: url("/img/envelope.svg") no-repeat;
+        }
+    }
+    &__order {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 34px;
+        width: 196px;
+        height: 50px;
+        text-decoration: none;
+        color: $text-light;
+        background: $violet;
+        border-radius: 50px;
+        box-shadow: 0 10px 10px rgba(65, 42, 189, 0.2);
+    }
+}
