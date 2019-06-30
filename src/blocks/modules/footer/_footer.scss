@@ -1,0 +1,54 @@
+.footer {
+    background-color: $dark;
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 115px;
+    }
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        &-item {
+            padding-left: 3px;
+            padding-right: 3px;
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+        &-link {
+            color: $text-light;
+            font-size: 16px;
+            font-family: $font-bold;
+            text-decoration: none;
+            &:hover,
+            &:active {
+                color: $green;
+            }
+        }
+    }
+    &__copy {
+        color: $gray-dark;
+        font-size: 14px;
+        font-family: $font-thin;
+        margin-top: 20px;
+    }
+}
+
+.footer-social {
+    display: flex;
+    height: 100%;
+    &__link {
+        margin-left: 19px;
+        &:hover,
+        &:active {
+            svg {
+                path {
+                    fill: $green;
+                }
+            }
+        }
+    }
+}
