@@ -20,6 +20,9 @@ gulp.task("smart-grid", (cb) => {
             xs: {
                 width: "320px"
             },
+            ssm: {
+                width: "480px"
+            },
             sm: {
                 width: "668px"
             },

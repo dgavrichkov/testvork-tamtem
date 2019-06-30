@@ -1,9 +1,13 @@
 .information {
-    padding-top: 90px;
+    padding: 90px 0 98px;
     background: url("/img/paper.png") no-repeat;
-    background-position: bottom left;
-    background-size: contain;
+    background-position-y: 120%;
+    background-position-x: -7%;
+    background-size: 42%;
+    @include lg(background-size, 90%);
+    @include lg(background-position, -320% 120%);
     &__title {
+        @include lg(font-size, 30px);
         font-size: 42px;
         line-height: 47px;
         font-family: $font-thin;
@@ -11,35 +15,53 @@
     }
     &__list {
         @include row-flex();
+        @include lg(padding-bottom, 40px);
         margin-top: 50px;
+        padding-bottom: 55px;
+        border-bottom: 1px solid $gray-light;
     }
     &__item {
         @include col();
         @include size(6);
+        @include size-lg(12);
+        @include lg(margin-bottom, 20px);
+        @include md(flex-direction, column);
+        @include md(align-items, flex-start);
+        @include md(padding-left, 60px);
         display: flex;
+        align-items: center;
+        position: relative;
     }
     &__pic {
         svg {
+            @include md(position, absolute);
+            @include md(top, -10px);
+            @include md(left, 0);
+            @include md(width, 47px);
             path {
-                fill: $violet;
+                fill: $gray-light;
             }
         }
     }
     &__text {
+        @include lg(font-size, 14px);
+        @include md(margin-left, 0);
+        flex: 1;
         font-size: 16px;
         line-height: 23px;
         font-family: $font-thin;
-        flex: 1;
         margin-left: 30px;
-        span {
-            font-family: $font-bold;
-            font-size: 18px;
-        }
+    }
+    &__tel {
+        margin-left: 5px;
+        font-family: $font-bold;
+        font-size: 18px;
     }
     &__order {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 38px;
         width: 196px;
         height: 50px;
         text-decoration: none;
@@ -47,6 +69,9 @@
         background: $violet;
         border-radius: 50px;
         box-shadow: 0 10px 10px rgba(65, 42, 189, 0.2);
+        @include lg(width, 161px);
+        @include md(margin-top, 20px);
+        @include md(margin-left, 0);
     }
     &__tabs {
         @include row-flex();
@@ -55,8 +80,108 @@
 }
 
 .tabs {
-    &__item{
+    &__item {
         @include col();
         @include size(6);
+        @include size-lg(12);
+    }
+    &__controls {
+        @include lg(display, flex);
+        @include lg(justify-content, space-between);
+        @include lg(flex-wrap, wrap);
+    }
+    &__control {
+        @include ssm(margin-bottom, 16px);
+        margin-bottom: 35px;
+    }
+    &__link {
+        @include lg(font-size, 18px);
+        text-decoration: none;
+        font-size: 20px;
+        color: $violet;
+        font-family: $font-bold;
+        &:hover {
+            color: $green;
+        }
+        &--open {
+            position: relative;
+            color: $gray-dark;
+            font-family: $font-thin;
+            padding-left: 25px;
+            pointer-events: none;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 0;
+                width: 15px;
+                height: 17px;
+                background: url("/img/triangle.svg") no-repeat;
+            }
+        }
+    }
+    &__screens {
+
+    }
+}
+.tab-screen {
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        min-height: 68px;
+        margin-bottom: 17px;
+    }
+    &__doc {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        min-height: 68px;
+        text-decoration: none;
+        color: $dark;
+        font-size: 16px;
+        line-height: 19px;
+        border: 1px solid $gray-light;
+        border-radius: 10px;
+        padding: 14px 0;
+        padding-left: 66px;
+        padding-right: 70px;
+        @include lg(padding-right, 30px);
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 20px);
+            left: calc(33px - 34px/2);
+            width: 34px;
+            height: 40px;
+            background: url("/img/list.svg") no-repeat;
+        }
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+        text-decoration: none;
+        font-family: $font-bold;
+        font-size: 16px;
+        color: $violet;
+        width: 332px;
+        min-height: 50px;
+        border-radius: 50px;
+        border: 2px solid $violet;
+        padding-left: 52px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 11px);
+            left: 20px;
+            width: 19px;
+            height: 22px;
+            background: url("/img/list-btn.svg") no-repeat;
+        } 
     }
 }
